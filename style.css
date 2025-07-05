@@ -1,0 +1,270 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#mainBodyContainer {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 5%;
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.sidebar>p {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 9px 8px;
+    text-align: center;
+    min-width: 30px;
+}
+
+#rightMainContainer {
+    width: 95%;
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 10px;
+}
+
+.unifiedInbox {
+    color: #ddd;
+}
+
+#mainContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#leftContainer {
+    padding: 16px 20px;
+    width: 30%;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+#rightContainer {
+    padding: 16px 20px;
+    width: 70%;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 1px solid #ddd;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.searchInputBox {
+    height: 26px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.hamburger {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#reviewContainer {
+    margin-top: 10px;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.review-card:hover {
+    background-color: #f4f4f4;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.stars {
+    color: gold;
+}
+
+.time {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* Selected Review Styling */
+.selected-review {
+    margin-bottom: 1.5rem;
+}
+
+.review-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.review-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-details h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.review-details p {
+    margin: 8px 0;
+}
+
+.posted-images {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.posted-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Reply Section */
+.reply-section {
+    border-top: 1px solid #ddd;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+}
+
+.reply-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.reply-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.reply-time {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.reply-text {
+    font-size: 16px;
+}
+
+/* ✅ Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+
+    #leftContainer,
+    #rightContainer {
+        width: 100%;
+    }
+
+    #mainContainer {
+        flex-direction: column;
+    }
+}
+
+@media screen and(min-width: 0px) and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 4px;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .reply-text {
+        font-size: 0.85rem;
+    }
+
+    .posted-image {
+        width: 48px;
+        height: 48px;
+    }
+
+    .review-details h2 {
+        font-size: 1rem;
+    }
+
+    .stars {
+        font-size: 0.9rem;
+    }
+
+    .reply-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
